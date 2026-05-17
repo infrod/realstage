@@ -680,6 +680,7 @@ function AuthPage({ role, setRole, session, setSession, selectedGroup, setSelect
                     <option value="supervisor">Superviseur</option>
                     <option value="admin">Enseignant / Admin</option>
                     <option value="direction">Direction</option>
+                    <option value="tos">TOS</option>
                   </select>
                 </label>
                 {mode === "signup" && (
