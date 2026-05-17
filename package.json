@@ -15,6 +15,7 @@
     "react-dom": "latest",
     "lucide-react": "latest",
     "framer-motion": "latest"
+    "@tailwindcss/postcss": "latest"
   },
   "devDependencies": {
     "tailwindcss": "latest",
