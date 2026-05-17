@@ -1736,6 +1736,7 @@ export default function App() {
           {role !== "supervisor" && role !== "direction" && <HoursOverview student={activeStudent} />}
           {role !== "supervisor" && role !== "direction" && <ProgressOverview student={activeStudent} />}
           {role === "admin" && <DocumentStatus student={activeStudent} />}
+          {role === "tos" && <TosView />}
 
           {role === "direction" ? null : role === "supervisor" ? (
             <>
