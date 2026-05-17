@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import TosView from "./views/TosView";
+import TosView from "./views/TosView.jsx";
 
 const BRAND = {
   navy: "#0D3B66",
@@ -618,6 +620,16 @@ function AuthPage({ role, setRole, session, setSession, selectedGroup, setSelect
     });
     onConnect();
   };
+  const connectAsTos = () => {
+  setRole("tos");
+  setSession({
+    ...session,
+    name: "TOS CFP",
+    email: "tos@csrsaguenay.qc.ca",
+    group: "Tous les programmes",
+  });
+  onConnect();
+};
   return (
     <div className="min-h-screen bg-slate-50">
       <header className="relative min-h-[260px] overflow-hidden md:min-h-[420px]">
@@ -678,6 +690,13 @@ function AuthPage({ role, setRole, session, setSession, selectedGroup, setSelect
                     </select>
                   </label>
                 )}
+                <button
+  type="button"
+  onClick={connectAsTos}
+  className="rounded-xl border bg-purple-50 p-2 text-sm font-bold"
+>
+  Démo TOS
+</button>
                 <Field label="Nom complet" value={session.name} onChange={(value) => setSession({ ...session, name: value })} placeholder="Nom complet" />
                 <Field label="Courriel" type="email" value={session.email} onChange={(value) => setSession({ ...session, email: value })} placeholder="nom@courriel.ca" />
                 <Field label="Mot de passe" type="password" value={password} onChange={setPassword} />
